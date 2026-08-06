@@ -8,7 +8,7 @@ This repository only contains PRs that were accepted and merged upstream. Work-i
 
 ```text
 typescript/
-  merge/   merged TypeScript / JavaScript contributions
+  merged TypeScript / JavaScript contributions
 ```
 
 Each note records the issue, root cause, fix, tests, and review outcome for one contribution.

@@ -152,7 +152,7 @@ MDN 패턴(`e = new Error(e)`)은 `Error`가 아닌 값이면 무조건 그 값 
 
 ### 4.4 스코프 확장 — 나머지 `catch (e: any)` 전체 인벤토리 (리뷰 담당이 조사)
 
-사용자가 "evm 쪽에 이 패턴이 더 있는데 다 고칠까?"라고 물어서, `grep -rn "catch\s*(\s*e[a-zA-Z]*\s*:\s*any\s*)" packages/evm/src packages/vm/src`로 **`packages/evm`과 `packages/vm` 전체를 뒤져서 남은 걸 전부 인벤토리화**함:
+사용자가 "evm 쪽에 이 패턴이 더 있는데 다 고칠까?"라고 물어서, `grep -rn "catch\s*(\s*e[a-zA-Z]*\s*:\s*any\s*)" packages/evm/src packages/vm/src`로 **`packages/evm`과 `packages/vm` 전체를 뒤져서 남은 걸 전부 목록으로 정리**함:
 
 | 파일 | `e`를 실제로 어떻게 쓰나 | 위험도 |
 |---|---|---|
@@ -353,7 +353,7 @@ fall back to String(err). Addresses #3687 for this one precompile.
 
 - [x] 메인테이너가 "per-library 접근"에 동의 — 별도 반론 없이 그대로 머지됨
 - [ ] "나머지 9개는 개별 재검증 안 함"에 대한 메인테이너의 별도 언급은 없었음 (코멘트 내용 자체를 다 확인하지는 못함 — 리뷰 코멘트 반영 커밋 1개가 붙은 걸로 봐서 사소한 요청은 있었을 것으로 추정)
-- [ ] `0f-bls12-pairing.ts`의 `getPrecompileName('11')` 오귀속 버그는 이번 PR에서 다루지 않았고, 별도 이슈로도 아직 안 올림
+- [ ] `0f-bls12-pairing.ts`의 `getPrecompileName('11')`이 이름을 잘못 반환하는 버그는 이번 PR에서 다루지 않았고, 별도 이슈로도 아직 안 올림
 - [x] PR #4343과 이 PR의 결과가 갈림 — 이 PR(#4344)은 그대로 머지, #4343은 리뷰 후 다른 PR(#4349)로 대체됨. 좁고 구체적인 이슈(#4344 근거인 #3687도 사실 넓은 이슈이긴 하지만 스코프를 이 PR에서 명확히 좁혀 제출한 것)와, 메인테이너가 "다르게 해보자"고 판단한 이슈의 차이가 실제로 결과에 반영된 사례
 - [x] 최종 머지: 2026-07-21, PR 오픈(2026-07-09)부터 머지까지 약 12일
 - [ ] 다른 precompile/패키지로 이어서 적용할지는 아직 별도로 안 정함
