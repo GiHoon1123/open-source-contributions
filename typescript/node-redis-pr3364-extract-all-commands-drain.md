@@ -258,7 +258,7 @@ AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
 
 ## 6. PR 제목/본문 다듬기
 
-본문 초안은 사용자가 직접 작성했고(원인·수정·테스트 각 한두 문장씩, AI 냄새 없음), 검토는 이것만 진행:
+본문 초안은 직접 작성했고(원인·수정·테스트 각 한두 문장씩, AI 냄새 없이), AI 도구로 검토는 이것만 받았다:
 
 - **scope 선택**: `fix(client): ...` 후보가 나왔는데, `fix(cluster): ...`로 바꾸자고 제안했다. 이유는 이 버그의 실제 영향 범위가 `cluster-slots.ts`의 슬롯 재배치 경로 하나뿐이고, 이 저장소의 최근 머지 이력(`fix(cluster): reject commands before cluster topology is ready`, `fix(sentinel): reject connect() instead of hanging...`)이 파일 위치가 아니라 실제 영향 영역으로 scope를 잡는 관례였기 때문. 이미 push해둔 커밋 메시지도 `fix(cluster): ...`였어서 제목과 일치시켰다.
 
@@ -359,9 +359,9 @@ const remainingCommands = sourceNode.client._getQueue().extractAllCommands();
 
 ---
 
-## 7. 이번 세션에서 있었던 것 — 개념 설명 Q&A
+## 7. 개념 설명 Q&A
 
-이번 PR은 구현 자체보다 **사용자가 연결 리스트/큐 구조를 이해하는 과정에서 나온 질문들**이 특히 길었다. 기록해둘 만한 순서:
+이번 PR은 구현 자체보다 **연결 리스트/큐 구조를 이해하는 과정에서 나온 질문들**이 특히 길었다. 기록해둘 만한 순서:
 
 1. "연결 리스트로 뭘 하고 뭘 저장하냐, 유저 명령어가 거기로 가냐" → `CommandToWrite` 구조체(args, resolve/reject, slotNumber 등) 설명
 2. "`#toWrite`/`#waitingForReply` 둘 다 연결 리스트냐" → 맞다, 근데 종류가 다르다(양방향 vs 단방향)는 것과 그 이유(중간 삭제 필요 여부)

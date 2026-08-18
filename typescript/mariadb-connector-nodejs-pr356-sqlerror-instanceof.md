@@ -125,9 +125,9 @@ disable-and-reconfirm 첫 시도에서 `git checkout HEAD~0 -- promise.js callba
 
 ---
 
-## 6. 리뷰 — 사용자의 자체 검토로 잡힌 것
+## 6. 리뷰 — 자체 검토로 잡힌 것
 
-PR을 올리기 전, 사용자가 직접 다음을 짚었고 전부 반영했다:
+PR을 올리기 전, 자체 검토로 직접 다음을 짚었고 전부 반영했다:
 
 1. **ESM `/callback` 서브패스의 `SqlError`가 검증에서 빠져있음** — `esm.mjs`가 `/callback` subpath에서 `createPool`만 확인하고 `SqlError`는 import조차 안 하고 있었다(CJS 쪽은 이미 양쪽 다 확인 중이었음). `SqlErrorCb` import + `instanceof`/constructor 검증 3줄 추가, disable-and-reconfirm으로 독립적으로 잡히는 것까지 재확인.
 2. **PR 본문 방향 조언** — "다운로드 수/공식성 얘기는 빼고, 'runtime export가 타입 선언대로 constructor가 되도록 고친다'에만 집중하라"는 조언을 그대로 반영해서 PR 본문을 작성함(이 문서 1절의 공식성 근거는 후보 선정 기록용으로만 남기고, PR 본문에는 안 넣음).
