@@ -24,7 +24,7 @@
 | 이슈 (#3066)             | https://github.com/redis/node-redis/issues/3066                       | Open (재작업 PR #3331이 Fixes 대상)          |
 | **첫 PR (#3329)**        | https://github.com/redis/node-redis/pull/3329                         | **Closed** (2026-07-10, 메인테이너가 클로즈) |
 | 메인테이너 클로징 코멘트 | https://github.com/redis/node-redis/pull/3329#issuecomment-4933984889 | —                                            |
-| **재작업 PR (#3331)**    | https://github.com/redis/node-redis/pull/3331                         | Open (2026-07-11 제출)                       |
+| **재작업 PR (#3331)**    | https://github.com/redis/node-redis/pull/3331                         | **Merged** (2026-07-13)                       |
 | 첫 PR 작업 브랜치        | `fix-issue-3066-sentinel-master-unreachable-silent-retry`             | —                                            |
 | 첫 PR 커밋               | `e6df6a2989`                                                          | —                                            |
 | 재작업 PR 브랜치         | `fix-3066-sentinel-unreachable-master-hang`                           | —                                            |

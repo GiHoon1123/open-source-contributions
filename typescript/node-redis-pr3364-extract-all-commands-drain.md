@@ -35,7 +35,7 @@
 | PR (#3364) | https://github.com/redis/node-redis/pull/3364 |
 | 작업 브랜치 | `fix-3363-extract-all-commands` |
 | 커밋 | `cf393bdaf0` |
-| 상태 | 🟡 OPEN (메인테이너 승인 완료, CI 전체 통과, 머지 대기) |
+| 상태 | 🟢 MERGED (2026-07-28) |
 
 ### 1.4 한 줄 요약
 

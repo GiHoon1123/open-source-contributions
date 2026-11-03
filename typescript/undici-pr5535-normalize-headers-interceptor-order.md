@@ -28,7 +28,7 @@
 | 작업 브랜치 | `fix-issue-5522-normalize-headers-interceptor-order` |
 | 커밋 | `9be4822a2c4a09826395e7872ebeca019315c2c8` (2026-07-09 17:32 KST) |
 | PR 생성 시각 | 2026-07-09 08:33:44 UTC (17:33 KST) |
-| 상태 | 🟡 OPEN |
+| 상태 | 🟢 MERGED (2026-07-28) |
 
 ### 1.4 한 줄 요약
 

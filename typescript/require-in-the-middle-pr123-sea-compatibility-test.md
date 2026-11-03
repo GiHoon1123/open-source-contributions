@@ -55,7 +55,7 @@ try {
 | PR (#123) | https://github.com/nodejs/require-in-the-middle/pull/123 |
 | 작업 브랜치 | `test-109-sea-compatibility` |
 | 커밋 | `47693ec8` |
-| 상태 | 🟡 OPEN (메인테이너 승인 완료, 머지 대기) |
+| 상태 | 🟢 MERGED (2026-07-28) |
 
 ### 1.5 한 줄 요약
 
